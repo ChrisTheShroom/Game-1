@@ -16,26 +16,24 @@ public class LightSwitchRaycast : MonoBehaviour
 
        if(Physics.Raycast(transform.position, fwd, out RaycastHit hit, rayLength))
        {
-           var raycastObj = hit.collider.gameObject.GetComponent<LightSwitchController>();
+            var raycastObj = hit.collider.gameObject.GetComponent<LightSwitchController>();
            if (raycastObj != null)
            {
-               Debug.Log("1");
                interactiveObj = raycastObj;
                crosshairChange(true);
            }
            else
            {
-               Debug.Log("2");
                ClearInteraction();
            }
        }
        else{
-           Debug.Log("3");
            ClearInteraction();
        }
 
        if (interactiveObj != null)
        {
+           
            if(Input.GetKeyDown(KeyCode.F))
            {
                interactiveObj.InteractSwitch();
@@ -62,5 +60,5 @@ public class LightSwitchRaycast : MonoBehaviour
        {
            crosshair.color = Color.white;
        }
-   }
+   } 
 }
