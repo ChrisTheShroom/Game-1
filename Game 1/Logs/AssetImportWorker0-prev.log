@@ -27,7 +27,6 @@ Initialize engine version: 2020.3.17f1 (a4537701e4ab)
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2070 SUPER (ID=0x1e84)
     Vendor:   
     VRAM:     8011 MB
     Driver:   30.0.15.1179
