@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DoorRaycast : MonoBehaviour
 {
@@ -45,8 +46,28 @@ public class DoorRaycast : MonoBehaviour
 					raycastedObj.PlayAnimation();
 				}
 			}
-		
 		}
-	
+
+		else
+		{
+			if (isCrosshairActive)
+			{
+				crosshairChange(false);
+				doOnce = false;
+			}
+		}	
+	}
+
+	void crosshairChange(bool on)
+	{
+		if(on && !doOnce)
+		{
+			crosshair.color = Color.red;
+		}
+		else
+		{
+			crosshair.color = Color.white;
+			isCrosshairActive = false;
+		}
 	}
 }
